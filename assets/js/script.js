@@ -7,7 +7,7 @@ function getParams() {
 }
 
 function searchApi(query, format) {
-    let locQueryUrl = 'api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=68a01bedfe0281ebdf08d0137195550e'
+    let locQueryUrl = 'api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid='
     if (format) {
         locQueryUrl = ''
     }
