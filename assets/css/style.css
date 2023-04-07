@@ -1,0 +1,14 @@
+header {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    height: 70px;
+}
+
+#search-input {
+    width: 300px;
+}
+
+#btnSearch {
+
+}
