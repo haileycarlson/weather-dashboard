@@ -36,7 +36,7 @@ header {
       padding:10px;
   }
 
-  .forcast-container{
+  .forecast-container{
     display:flex;
     align-items: center;
     justify-content: space-around;
@@ -44,9 +44,17 @@ header {
     gap:10px;
   }
 
-  .forcast-container .card{
-color:white;
-background-color:black;
-padding:15px;
+  .card{
+    color:white;
+    background-color:rgb(130, 140, 255);
+    padding:15px;
 
+  }
+
+  .searchInput{
+    width:100%;
+    margin:5px;
+    background-color: rgb(46, 188, 235);
+    border:none;
+    border-radius:10px;
   }
