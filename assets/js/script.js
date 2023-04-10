@@ -21,10 +21,12 @@ for(let key of Object.keys(searchHistory)){
   addHisBtn(key)
 }
 }
+
 // loadHistory()
 
 
 function addHisBtn(key){
+ 
   const buttonEl=document.createElement("button")
   buttonEl.innerHTML=key
   buttonEl.className="searchInput"
@@ -33,6 +35,7 @@ function addHisBtn(key){
     
   })
   historyCon.appendChild(buttonEl)
+
 }
 
 
@@ -93,7 +96,7 @@ function searchWeather(cityName) {
       
       */
       for(let day of days){
-      
+           
            foreCastConEl.appendChild(generateCard(day))
       }
 
@@ -156,7 +159,7 @@ function handleSearchFormSubmit(event) {
     console.error('You need to enter a city!')
     return
   }
-
+  foreCastConEl.innerHTML = ""
   searchWeather(cityName)
 }
 
