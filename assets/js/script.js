@@ -10,17 +10,19 @@ let searchHistory = JSON.parse(localStorage.getItem('search-input'))
 let historyCon=document.querySelector("#history")
 let searchInput=document.querySelector('#search-input')
 let currentCity = document.querySelector('#city')
-//load history
+
 
 let currentDate = new Date()
 let dateString = currentDate.toLocaleDateString()
 
+// load history
 function loadHistory(){
 for(let key of Object.keys(searchHistory)){
   addHisBtn(key)
 }
 }
-loadHistory()
+// loadHistory()
+
 
 function addHisBtn(key){
   const buttonEl=document.createElement("button")
@@ -49,7 +51,6 @@ function searchWeather(cityName) {
     .then((res) => res.json())
     .then((data) => {
       
-console.log(data)
       currentCity.innerHTML= data.name +" "+ dateString
       currentTemp.innerHTML="Temperature: "+data.main.temp
       currentHummidity.innerHTML="Humidity: "+data.main.humidity
@@ -103,8 +104,6 @@ console.log(data)
 
     addHisBtn(cityName)
     localStorage.setItem("search-input", JSON.stringify({...searchHistory,[cityName]:true}) )
- 
-
 
 } 
 
@@ -145,6 +144,7 @@ function generateCard(day){
    cardEl.appendChild(cardBody)
    cardEl.className="card"
    return cardEl
+
 }
 
 function handleSearchFormSubmit(event) {
